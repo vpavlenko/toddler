@@ -30,7 +30,6 @@ def toddler(view):
         # TODO: Make deep camelization when needed.
         return JsonResponse({stringcase.camelcase(k): v for k, v in view(*args).items()})
     return wrapper
-```
 
 @toddler
 def get_notes(request):
